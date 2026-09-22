@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RedBrief：轻量网页与长文本速读助手" />
+  <title>RedBrief｜内容速读助手</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand"><span>R</span> RedBrief</div>
+      <p class="tag">把“太长不看”，变成“一眼看懂”</p>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CONTENT INSIGHT · MVP</p>
+        <h1>贴入一段内容，<br />快速抓住重点。</h1>
+        <p class="intro">面向招聘信息、新闻和长笔记的轻量归纳工具。无需登录，也不需要 API Key。</p>
+      </div>
+      <div class="input-card">
+        <label for="sourceText">粘贴网页正文或长文本</label>
+        <textarea id="sourceText" placeholder="例如：粘贴一段招聘信息、新闻或小红书长笔记……"></textarea>
+        <div class="actions">
+          <button class="secondary" id="sampleBtn">填入示例</button>
+          <button class="primary" id="summarizeBtn">立即归纳 →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="result hidden" id="result" aria-live="polite">
+      <div class="result-head">
+        <div><p class="eyebrow">QUICK BRIEF</p><h2>内容速览</h2></div>
+        <button class="copy" id="copyBtn">复制结果</button>
+      </div>
+      <div class="grid">
+        <article class="summary-card">
+          <h3>三句话摘要</h3>
+          <ol id="summaryList"></ol>
+        </article>
+        <article>
+          <h3>关键词</h3>
+          <div class="tags" id="keywordList"></div>
+          <h3 class="space">你可能需要关注</h3>
+          <ul class="checks" id="actionList"></ul>
+        </article>
+      </div>
+    </section>
+
+    <p class="footnote">RedBrief Prototype · 为小红书非技术岗作品集设计</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
